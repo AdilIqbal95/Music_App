@@ -1,4 +1,5 @@
 import React from 'react'
+import Like from './Like'
 
 function Card(props){
     return (
@@ -7,6 +8,7 @@ function Card(props){
         <h3>{props.data.artist}</h3>
         <img src={props.data.image} />
         <small>{props.data.producer} | {props.data.year}</small>
+        <Like/>
         </div>
     )
 }
