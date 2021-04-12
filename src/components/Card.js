@@ -5,7 +5,8 @@ function Card(props){
         <div>
         <h2>{props.data.album}</h2>
         <h3>{props.data.artist}</h3>
-        <img width="306" src={props.data.image} />
+        <img src={props.data.image} />
+        <small>{props.data.producer} | {props.data.year}</small>
         </div>
     )
 }

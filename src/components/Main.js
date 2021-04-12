@@ -4,6 +4,8 @@ import Card from './Card'
 import album_data from '../data'
 import Header from './Header'
 
+import '../style.css'
+
 function CardList(){
     return (
         album_data.map(album => <Card data={album} />)
@@ -12,10 +14,12 @@ function CardList(){
 
 function Main(){
     return (
+        <>
+        <Header/>
         <main>
-            <Header/>
             <CardList />
         </main>
+        </>
     )
 }
 
