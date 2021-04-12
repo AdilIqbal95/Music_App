@@ -1,10 +1,16 @@
 import React from 'react'
 
 function AddAlbum(props){
+
+    function handleSubmit(e){
+        e.preventDefault()
+        props.upDateAlbumList({album:"hello"})
+    }
+
     return (
         <div>
             <h2>Add your own!</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label HTMLfor="album">Album:</label>
                 <input type="text" name="album" id="album"/>
 
