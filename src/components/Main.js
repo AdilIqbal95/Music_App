@@ -1,6 +1,8 @@
 import React from 'react'
 
 import Card from './Card'
+import AddAlbum from './AddAlbum'
+
 import album_data from '../data'
 import Header from './Header'
 
@@ -18,6 +20,7 @@ function Main(){
         <Header/>
         <main>
             <CardList />
+            <AddAlbum />
         </main>
         </>
     )

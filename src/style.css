@@ -58,3 +58,19 @@ main div small {
 main div img {
     width: 100%;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    position: relative;
+}
+
+input {
+    padding: .5rem;
+    margin: .5rem;
+}
+
+input[type="submit"] {
+    margin-top: 1rem;
+}
