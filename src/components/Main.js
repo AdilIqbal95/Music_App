@@ -14,10 +14,12 @@ function CardList(){
 
 function Main(){
     return (
+        <>
+        <Header/>
         <main>
-            <Header/>
             <CardList />
         </main>
+        </>
     )
 }
 
