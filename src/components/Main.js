@@ -2,6 +2,7 @@ import React from 'react'
 
 import Card from './Card'
 import album_data from '../data'
+import Header from './Header'
 
 function CardList(){
     return (
@@ -12,6 +13,7 @@ function CardList(){
 function Main(){
     return (
         <main>
+            <Header/>
             <CardList />
         </main>
     )
