@@ -1,5 +1,5 @@
 import React from 'react'
-import Like from './Like'
+import {Like} from '..'
 
 function Card(props){
     return (
@@ -14,6 +14,5 @@ function Card(props){
         </div>
     )
 }
-
 
 export default Card;

@@ -1,17 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 
 function Like(){
+    const [toggle, setToggle] = useState(false)
+    
     function handleClick(e) {
-      e.preventDefault();
-      console.log('like button clicked')
+      setToggle(currentValue => !currentValue)
+      
     }
   
   
     return (
       <>
         <small id="like">
-          <button onclick={handleClick}>Like</button>
+          <button onClick={handleClick} style={{background:toggle? 'green':'grey'}}>Like</button>
         </small>
       </>
     )
