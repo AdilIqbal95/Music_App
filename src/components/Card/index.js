@@ -2,7 +2,7 @@ import React from 'react'
 
 function Card({data}){
     return (
-        <div>
+        <div role="listitem">
             <h2>{data.album}</h2>
             <h3>{data.artist}</h3>
             <img src={data.image} />
