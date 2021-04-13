@@ -1,5 +1,6 @@
 import React from 'react'
-import Main from './components/Main'
+import { Main } from './components'
+import './App.css';
 
 const App = () => <Main />
 

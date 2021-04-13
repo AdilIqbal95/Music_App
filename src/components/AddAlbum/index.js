@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function AddAlbum(props){
+function AddAlbum({upDateAlbumList}){
     const [album, setAlbum] = useState('')
     const [artist, setArtist] = useState('')
     const [image, setImage] = useState('')
@@ -10,7 +10,7 @@ function AddAlbum(props){
 
     function handleSubmit(e){
         e.preventDefault()
-        props.upDateAlbumList({album, artist, image, producer, year})
+        upDateAlbumList({album, artist, image, producer, year})
         setAlbum('')
         setArtist('')
         setImage('')
@@ -24,22 +24,22 @@ function AddAlbum(props){
 
 
     return (
-        <div>
+        <div role="listitem">
             <h2>Add your own!</h2>
             <form onSubmit={handleSubmit}>
-                <label HTMLfor="album">Album:</label>
+                <label htmlFor="album">Album:</label>
                 <input onChange={(event) => handleInput(event, setAlbum)} type="text" name="album" id="album" value={album}/>
 
-                <label HTMLfor="artist">Artist:</label>
+                <label htmlFor="artist">Artist:</label>
                 <input onChange={(event) => handleInput(event, setArtist)} type="text" name="artist" id="artist" value={artist}/>
 
-                <label HTMLfor="image">Cover image url:</label>
+                <label htmlFor="image">Cover image url:</label>
                 <input onChange={(event) => handleInput(event, setImage)} type="text" name="image" id="image"  value={image}/>
                 
-                <label HTMLfor="producer">Producer:</label>
+                <label htmlFor="producer">Producer:</label>
                 <input onChange={(event) => handleInput(event, setProducer)} type="text" name="producer" id="producer" value={producer}/>
 
-                <label HTMLfor="year">Year:</label>
+                <label htmlFor="year">Year:</label>
                 <input onChange={(event) => handleInput(event, setYear)} type="number" name="year" id="year" value={year}/>
 
                 <input type="submit" name="submit" id="submit" value="submit"/>
