@@ -16,6 +16,6 @@ describe('Card', () => {
 
     test('renders a Card ', () => {
         let card = screen.getByRole('listitem')
-        expect(card.innerHTML).toBe('<h2>TestAlbum</h2><h3>TestArtist</h3><img src=\"\"><small>TestProducer | 2000</small>')
+        expect(card.innerHTML).toBe('<h2>TestAlbum</h2><h3>TestArtist</h3><img src=\"\"><small>TestProducer | 2000</small><small id=\"like\"><button>Like</button></small>')
     })
 })
