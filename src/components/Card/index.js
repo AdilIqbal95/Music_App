@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-import {Like} from '..'
-=======
 import { Like } from '..'
->>>>>>> staging
 
 function Card({ data }){
     return (
