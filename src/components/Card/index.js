@@ -1,16 +1,18 @@
 import React from 'react'
+<<<<<<< HEAD
 import {Like} from '..'
+=======
+import { Like } from '..'
+>>>>>>> staging
 
-function Card(props){
+function Card({ data }){
     return (
-        <div>
-        <h2>{props.data.album}</h2>
-        <h3>{props.data.artist}</h3>
-        <img src={props.data.image} />
-        
-        <small>{props.data.producer} | {props.data.year}</small>
-        <Like/>
-        
+        <div role="listitem">
+            <h2>{data.album}</h2>
+            <h3>{data.artist}</h3>
+            <img src={data.image} />
+            <small>{data.producer} | {data.year}</small>
+            <Like />
         </div>
     )
 }

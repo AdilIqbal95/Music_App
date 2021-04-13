@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function AddAlbum(props){
+function AddAlbum({upDateAlbumList}){
     const [album, setAlbum] = useState('')
     const [artist, setArtist] = useState('')
     const [image, setImage] = useState('')
@@ -10,7 +10,7 @@ function AddAlbum(props){
 
     function handleSubmit(e){
         e.preventDefault()
-        props.upDateAlbumList({album, artist, image, producer, year})
+        upDateAlbumList({album, artist, image, producer, year})
         setAlbum('')
         setArtist('')
         setImage('')
@@ -24,7 +24,7 @@ function AddAlbum(props){
 
 
     return (
-        <div>
+        <div role="listitem">
             <h2>Add your own!</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="album">Album:</label>
