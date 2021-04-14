@@ -12,9 +12,7 @@ function Like(){
   
     return (
       <>
-        <small id="like">
           <button onClick={handleClick} style={{background:toggle? 'green':'grey'}}>Like</button>
-        </small>
       </>
     )
 }

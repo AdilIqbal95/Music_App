@@ -12,10 +12,17 @@ const data = {
 describe('Card', () => {
     beforeEach(() => {
         render(<Card data={data}/>)
+        jest.resetAllMocks();
+        jest.useFakeTimers();
     })
 
     test('renders a Card ', () => {
         let card = screen.getByRole('listitem')
-        expect(card.innerHTML).toBe('<h2>TestAlbum</h2><h3>TestArtist</h3><img src=\"\"><small>TestProducer | 2000</small><small id=\"like\"><button>Like</button></small>')
+        expect(card.innerHTML).toContain('<h2>TestAlbum')
+    })
+
+    test('it starts an 3 second interval on mount', () => {
+        render(<Card data={data}/>)
+        expect(setInterval).toHaveBeenCalledWith(expect.any(Function), 3000);
     })
 })

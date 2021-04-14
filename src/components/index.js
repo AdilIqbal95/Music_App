@@ -5,5 +5,5 @@ export { default as AddAlbum } from './AddAlbum';
 export { default as Card } from './Card';
 export { default as Like } from './Like';
 export { default as Api } from './Lyrics_Api';
-
-
+export { default as BackButton } from './BackButton';
+export { default as Nav } from './Nav';
