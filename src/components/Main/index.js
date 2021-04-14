@@ -15,7 +15,6 @@ function Main(){
 
     return (
         <>
-        <Header/>
         <main>
             <CardList albumList={albumList} />
             <AddAlbum upDateAlbumList={upDateAlbumList} />
