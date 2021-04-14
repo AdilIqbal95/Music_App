@@ -1,8 +1,7 @@
 {
-  "name": "Music_App",
+  "name": "music-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "homepage": "https://rolling-stone-app.netlify.app",
   "scripts": {
     "test": "jest --watch --verbose --setupFilesAfterEnv ./src/test/setupTests.js",
     "coverage": "jest --setupFilesAfterEnv ./src/test/setupTests.js --coverage --silent --watchAll=false",
