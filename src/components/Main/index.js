@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 
-import {CardList, AddAlbum, Header} from '..'
+import {CardList, AddAlbum, Header, Api} from '..'
 
 import album_data from '../../data'
+
 
 function Main(){
 
@@ -18,6 +19,7 @@ function Main(){
         <main>
             <CardList albumList={albumList} />
             <AddAlbum upDateAlbumList={upDateAlbumList} />
+            <Api />
         </main>
         </>
     )
