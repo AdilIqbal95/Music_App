@@ -4,17 +4,15 @@ import axios from 'axios';
 const Api = ({upDateParams}) => {
     const [artist, setArtist] = useState('');
     const [title, setTitle] = useState('');
+    const [search, setSearch] = useState('')
     const [lyrics, setLyrics] = useState('');
     
     function handleSubmit(e){
       e.preventDefault()
-      upDateParams({artist, title})
+      setSearch({artist: artist, title: title})
       setArtist('')
-      console.log('Artist is',artist)
       setTitle('')
-      console.log('Title is',title)
-      setLyrics('')
-      console.log('Lyrics are',lyrics)
+
   }
 
     function handleInput(e, inputToSet){
@@ -23,17 +21,18 @@ const Api = ({upDateParams}) => {
     useEffect(() => {
       async function getLyrics() {
         try {
-          let {data} = await axios.get(`https://api.lyrics.ovh/v1/${artist}/${title}`)
+          let {data} = await axios.get(`https://api.lyrics.ovh/v1/${search.artist}/${search.title}`)
           console.log(data)
           setLyrics(data.lyrics);
         } catch (err) {
           console.warn(err);
+          search ? setLyrics('cannot find that song') : null
         }
 
       }
       getLyrics()
 
-    },[])
+    },[search])
 
     return (
       <div role="listitem">
@@ -48,6 +47,7 @@ const Api = ({upDateParams}) => {
 
           <input type="submit" name="submit" id="submit" value="submit"/>
         </form>
+        <p>{search.title} {search.artist && `by ${search.artist}`}</p>
         <p>{ lyrics }</p>
   
       </div>
