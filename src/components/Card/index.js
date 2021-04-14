@@ -12,17 +12,17 @@ function Card({ data, id }) {
  try {
   return (
     <div style={{background: bgColor}} role="listitem">
-      <h2>{data.album}<Like /></h2>
+      {id && <a href={`/albums/${id}`}>more info...</a>}<Like />
+      <h2 style={{marginTop: "1rem"}}>{data.album}</h2>
       <h3>{data.artist}</h3>
       <img src={data.image} />
       <small>
         {data.producer} | {data.year}
-        {id && <a href={`/albums/${id}`}>read more...</a>}
       </small>
     </div>
   );
  } catch (err) {
-   return <h2>album not found...</h2>
+   return <h1>album not found...</h1>
  }
 }
 

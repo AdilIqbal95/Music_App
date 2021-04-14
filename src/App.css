@@ -18,6 +18,10 @@ h1 {
     padding: 1rem;
 }
 
+h1, h2, h3, h4, small {
+    background: rgba(255,255,255,.8);
+}
+
 main div {
     width: calc(100% / 3 - 2rem);
     margin: 1rem;
@@ -73,4 +77,24 @@ input {
 
 input[type="submit"] {
     margin-top: 1rem;
+}
+
+a {
+    font-size: 1.2rem;
+    color: black;
+    background: rgba(255,255,255,.8);
+    padding: .5rem 1rem;
+    margin: 0 .5rem;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
 }

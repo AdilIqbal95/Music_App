@@ -1,10 +1,10 @@
 import React from 'react'
-import { BackButton } from '..'
+import { Nav } from '..'
 
 function Header(){
     return (
         <header>
-          <BackButton />
+          <Nav />
           <h1 aria-label="title">Rolling Stone - Top 10 greatest albums</h1>
         </header>
     )
