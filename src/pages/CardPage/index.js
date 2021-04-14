@@ -6,8 +6,8 @@ import { useParams, useHistory } from "react-router-dom";
 function CardPage() {
   let { id } = useParams();
   const history = useHistory();
-  const prevAlbum = () => history.push(`/${Number(id) - 1}`);
-  const nextAlbum = () => history.push(`/${Number(id) + 1}`);
+  const prevAlbum = () => history.push(`/albums/${Number(id) - 1}`);
+  const nextAlbum = () => history.push(`/albums/${Number(id) + 1}`);
 
   return (
     <main style={{ display: "flex", justifyContent: "center" }}>
